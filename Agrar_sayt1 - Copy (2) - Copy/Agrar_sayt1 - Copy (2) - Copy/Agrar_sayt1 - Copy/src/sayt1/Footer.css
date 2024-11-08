@@ -1,0 +1,107 @@
+footer {
+    background-color: #131418;    color: white;
+    padding: 40px 0;
+    margin-top: 2%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-section .contact p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.footer-section .contact p i {
+    margin-right: 10px;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    /*background-color: #003d4d; !* Pastki qismning quyuqroq foni *!*/
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Define the background color when the class is active */
+.background-changed {
+    background-color: #f0f8ff; /* Change to your desired color */
+}
+
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+
+.light-theme .footer-container .footer-bottom .footer-section about  {
+    /*background: #e0e0e0;*/
+    color: black;
+    border-top-color: black;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+.light-theme .footer-section  h3 {
+    color: black;
+}
+.light-theme .footer-section p{
+    color: black;
+}
+.light-theme .footer-container a {
+    color: black;
+}
+.light-theme  footer{
+    background: #ffff;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+
+    color: black;
+}

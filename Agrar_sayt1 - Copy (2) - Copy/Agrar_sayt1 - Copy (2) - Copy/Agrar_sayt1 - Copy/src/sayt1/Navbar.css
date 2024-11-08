@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: #f2f5f7;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+nav {
+    height: 6rem;
+    width: 100vw;
+    background-color: #131418;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    position: fixed;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.logo {
+    margin-left: 2%;
+  }
+  .nav-links li Link{
+    margin-left: 5%;
+  }
+.nav-links {
+    display: flex;
+    list-style: none;
+    width: 88vw;
+    padding: 0 0.7vw;
+    justify-content: space-evenly;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    margin: 0 0.7vw;
+}
+
+.nav-links li a:hover {
+    color: #61DAFB;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a::before {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 0%;
+    background-color: #61DAFB;
+    position: absolute;
+    transition: all ease-in-out 250ms;
+    margin: 0 0 0 10%;
+}
+
+.nav-links li a:hover::before {
+    width: 80%;
+}
+
+.nav-links li a span {
+    font-size: 30px;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background: #ffffff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+.hamburger {
+    display: none;
+}
+
+.nav-links.open {
+    clip-path: circle(1000px at 90% -10%);
+    pointer-events: all;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.light-theme {
+    background-color: #fff;
+    color: #000;
+}
+
+nav {
+    background-color: #131418;
+    color: #fff;
+}
+
+.light-theme nav {
+    background-color: #fff;
+    color: #000;
+}
+
+.light-theme .nav-links li a {
+    color: #380505;
+}
+
+.background-changed {
+    background-color: #f0f8ff;
+}
+
+@media screen and (max-width: 800px) {
+    nav {
+        position: fixed;
+        z-index: 3;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+
+    .nav-links {
+        position: fixed;
+        background: #000000;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+
+    .nav-links.open {
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+
+    .nav-links li {
+        opacity: 0;
+        position: relative;
+        width: 50%;
+        text-align: center;
+        animation: fadeIn 0.5s ease forwards;
+    }
+
+    .nav-links li:nth-child(1) {
+        animation-delay: 0.2s;
+    }
+    .nav-links li:nth-child(2) {
+        animation-delay: 0.4s;
+    }
+    .nav-links li:nth-child(3) {
+        animation-delay: 0.6s;
+    }
+    .nav-links li:nth-child(4) {
+        animation-delay: 0.8s;
+    }
+    .nav-links li:nth-child(5) {
+        animation-delay: 1s;
+    }
+    .nav-links li:nth-child(6) {
+        animation-delay: 1.2s;
+    }
+    .nav-links li:nth-child(7) {
+        animation-delay: 1.4s;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+#theme-toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #ffcc00;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 204, 0, 0.2);
+}
+
+#theme-icon {
+    display: inline-block;
+    font-size: 2rem;
+}
+
+body.light-theme #theme-toggle {
+    color: #333;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+body.light-theme #theme-icon {
+    color: #333;
+}
